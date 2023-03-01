@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:version1_2/registration.dart';
 import 'forgotpassword.dart';
-import 'studenthome.dart';
+import 'navigator.dart';
 
 
 class StudentLogin extends StatelessWidget {
@@ -98,7 +98,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                     print(nameController.text);
                     print(passwordController.text);
                     Navigator.push(
-                        context, MaterialPageRoute(builder: (_) => const StudentHome())
+                        context, MaterialPageRoute(builder: (_) => const Navigation())
                     );
                   },
                 )),
