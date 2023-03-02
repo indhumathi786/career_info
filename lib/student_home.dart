@@ -46,7 +46,7 @@ class MyListView extends StatelessWidget {
             },
           ),
           ListTile(
-            title: const Text('TCS Career'),
+            title: const Text('TCS Careers'),
             trailing: const Icon(Icons.keyboard_arrow_right_sharp),
             onTap: () {
               Navigator.push(
@@ -58,7 +58,7 @@ class MyListView extends StatelessWidget {
             },
           ),
           ListTile(
-            title: const Text('MMC Job O'),
+            title: const Text('MMC Infotech'),
             trailing: const Icon(Icons.keyboard_arrow_right_sharp),
             onTap: () {
               Navigator.push(

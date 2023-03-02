@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'successful.dart';
+
 class SecondScreen extends StatelessWidget {
   const SecondScreen({Key? key}) : super(key: key);
 
@@ -92,7 +94,10 @@ class SecondScreen extends StatelessWidget {
               ),
               ElevatedButton(
                 child: const Text('APPLY'),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (_) => const Success()));
+                },
               ),
             ],
           ),

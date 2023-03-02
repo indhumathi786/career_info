@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'successful.dart';
+
 class ThirdScreen extends StatelessWidget {
   const ThirdScreen({Key? key}) : super(key: key);
 
@@ -91,7 +93,10 @@ class ThirdScreen extends StatelessWidget {
               ),
               ElevatedButton(
                 child: const Text('APPLY'),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (_) => const Success()));
+                },
               ),
             ],
           ),

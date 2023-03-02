@@ -16,53 +16,55 @@ class Applied extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyListView(),
+      home: const MyListView(),
     );
   }
 }
 
 
 class MyListView extends StatelessWidget {
+  const MyListView({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Student Home Page'),
+        title: const Text('Student Home Page'),
       ),
       body: ListView(
         children: [
           ListTile(
-            title: Text('Wipro Jobs 2023'),
-            trailing: Icon(Icons.keyboard_arrow_right_sharp),
+            title: const Text('Wipro Jobs 2023'),
+            trailing: const Icon(Icons.keyboard_arrow_right_sharp),
             onTap: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => FirstScreen(),
+                  builder: (context) => const FirstScreen(),
                 ),
               );
             },
           ),
           ListTile(
-            title: Text('TCS Career'),
-            trailing: Icon(Icons.keyboard_arrow_right_sharp),
+            title: const Text('TCS Career'),
+            trailing: const Icon(Icons.keyboard_arrow_right_sharp),
             onTap: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => SecondScreen(),
+                  builder: (context) => const SecondScreen(),
                 ),
               );
             },
           ),
           ListTile(
-            title: Text('MMC Job O'),
-            trailing: Icon(Icons.keyboard_arrow_right_sharp),
+            title: const Text('MMC Job O'),
+            trailing: const Icon(Icons.keyboard_arrow_right_sharp),
             onTap: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => ThirdScreen(),
+                  builder: (context) => const ThirdScreen(),
                 ),
               );
             },

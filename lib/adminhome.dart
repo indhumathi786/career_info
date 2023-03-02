@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:version1_2/loginscreen.dart';
+import 'first_screen.dart';
+import 'second_screen.dart';
+import 'third_screen.dart';
 
 
 class AdminHome extends StatelessWidget {
@@ -32,11 +36,48 @@ class MyHomePage extends StatelessWidget {
         title: Text(title),
         backgroundColor: Colors.blue,
       ),
-      body: const Center(
-        child: Text(
-          'home page',
-          style: TextStyle(fontSize: 20),
-        ),
+      body: ListView(
+        children: [
+          ListTile(
+            title: const Text('wipro jobs'),
+            trailing: const Icon(Icons.keyboard_arrow_right_sharp),
+
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const FirstScreen(),
+                ),
+
+              );
+            },
+          ),
+          ListTile(
+            title: const Text('TCS Career'),
+            trailing: const Icon(Icons.keyboard_arrow_right_sharp),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const SecondScreen(),
+                ),
+              );
+            },
+          ),
+          ListTile(
+            title: const Text('MMC Job O'),
+            trailing: const Icon(Icons.keyboard_arrow_right_sharp),
+
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const ThirdScreen(),
+                ),
+              );
+            },
+          ),
+        ],
       ),
       drawer: Drawer(
         child: ListView(
@@ -79,8 +120,10 @@ class MyHomePage extends StatelessWidget {
             ListTile(
               leading: const Icon(Icons.logout),
               title: const Text('LogOut'),
+
               onTap: () {
-                Navigator.pop(context);
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (_) => const Login()));
               },
             ),
           ],

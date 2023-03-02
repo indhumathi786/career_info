@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'successful.dart';
+
 
 class FirstScreen extends StatelessWidget {
   const FirstScreen({Key? key}) : super(key: key);
@@ -86,12 +88,15 @@ class FirstScreen extends StatelessWidget {
                     "Interview Round:  FirstRound is Aptitude.SecondRound is Business.ThirdRound is HR.",
                     style: TextStyle(fontSize: 16)),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               ElevatedButton(
                 child: const Text('APPLY'),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (_) => const Success()));
+                },
               ),
             ],
           ),
